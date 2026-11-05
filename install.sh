@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Version 1.3
+# Version 1.4
 #
 # This will automatically install the WTU menus and email configuration.
 #
@@ -34,7 +34,7 @@ echo "You will now need the email sending password..."
 echo ""
 read -p "Enter the email password: " email_password
 #
-printf "$email_password" >> /etc/postfix/sasl_passwd
+echo -n "$email_password" >> /etc/postfix/sasl_passwd
 #
 # Now to reload Postfix with the new data
 #
