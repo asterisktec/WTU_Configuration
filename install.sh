@@ -34,7 +34,13 @@ echo "You will now need the email sending password..."
 echo ""
 read -p "Enter the email password: " email_password
 #
-echo "$email_password" >> /etc/postfix/sasl_passwd
+printf "$email_password" >> /etc/postfix/sasl_passwd
+#
+# Now to reload Postfix with the new data
+#
+echo "Updating PostFix Email System" ; sleep 2
+#
+postmap /etc/postfix/sasl_passwd
 #
 # Linking required menu scripts
 #
