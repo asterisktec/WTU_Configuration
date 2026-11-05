@@ -34,7 +34,9 @@ echo "You will now need the email sending password..."
 echo ""
 read -p "Enter the email password: " email_password
 #
-echo -n "$email_password" >> /etc/postfix/sasl_passwd
+email_password="${email_password//[$'\n']/}"
+#
+printf %s "smtp.mailgun.org raspberrypi_diagnostic@sandboxd9ab5c704d1e4ae9b9c66b3b7f3ac419.mailgun.org:$email_password" > /etc/postfix/sasl_passwd
 #
 # Now to reload Postfix with the new data
 #
