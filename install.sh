@@ -28,6 +28,14 @@ echo "Copying /etc folder to root" ; sleep 2
 #
 cp -r etc /
 #
+# Now lets get the email password
+#
+echo "You will now need the email sending password..."
+echo ""
+read -p "Enter the email password: " email_password
+#
+echo "$email_password" >> /etc/postfix/sasl_passwd
+#
 # Linking required menu scripts
 #
 echo "Linking menu and other scripts" ; sleep 2
