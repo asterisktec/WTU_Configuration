@@ -1,0 +1,69 @@
+#!/bin/bash
+#
+# Version 1.3
+#
+# This will automatically install the WTU menus and email configuration.
+#
+# Must be run as root or in sudo
+#
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Not running with sufficient permissions, please use sudo."
+    exit
+fi
+#
+echo "Moving main files to the /opt folder" ; sleep 2
+#
+cp -r opt /
+#
+# Copy over the new crontab file
+# but backup the old one just to be safe.
+#
+echo "Backing up old crontab file" ; sleep 2
+#
+mv /etc/crontab /etc/crontab.bac
+#
+# Copy over the postfix data and crontab
+#
+echo "Copying /etc folder to root" ; sleep 2
+#
+cp -r etc /
+#
+# Linking required menu scripts
+#
+echo "Linking menu and other scripts" ; sleep 2
+#
+ln -s /opt/wellpass/wp-diagnostics /usr/bin/
+ln -s /opt/wellpass/wp-dataclean /usr/bin/
+#
+# Setting as executable
+#
+echo "Setting executable permissions on scripts" ; sleep 2
+#
+chmod +x /usr/bin/wp-diagnostics /usr/bin/wp-dataclean
+#
+# Copy over the webpage
+#
+echo "Copying web data" ; sleep 2
+#
+ln -s /opt/wellpass/http/ /home/wpadmin/
+#
+# Copy the results files
+#
+echo "Copying database files to wpadmin home" ; sleep 1
+#
+cp /opt/wellpass/results_blank.csv /home/wpadmin/
+cp /opt/wellpass/results.csv /home/wpadmin/
+#
+# Link the archive data folder
+#
+echo "Linking archive data folder" ; sleep 1
+#
+ln -s /opt/wellpass/ARCHIVE_DATA/ /home/wpadmin/
+#
+# And lastly, make sure all permissions are set correctly
+#
+echo "Setting permissions" ; sleep 2
+#
+chown wpadmin:wpadmin -R /home/wpadmin/
+#
+echo "Installation and setup complete..."

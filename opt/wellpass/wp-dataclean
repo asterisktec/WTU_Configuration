@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Version 1.0
+#
+cp /home/wpadmin/results.csv /home/wpadmin/ARCHIVE_DATA/results_$(date +%Y-%m-%d-%H:%M).csv
+#
+cp /home/wpadmin/results_blank.csv /home/wpadmin/results.csv
