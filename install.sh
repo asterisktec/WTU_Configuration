@@ -98,6 +98,6 @@ chown wpadmin:wpadmin -R /home/wpadmin/
 echo ""
 echo "Installation and setup complete..."
 echo ""
-echo "Please update the /etc/crontab file with the correct" 
-echo "SYSTEMHOST variable of $HOSTNAME to ensure correct mail delivery."
+echo "Please change the /etc/crontab file with the correct" 
+echo "SYSTEMHOST variable to $HOSTNAME to ensure correct mail delivery."
 #
