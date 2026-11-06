@@ -95,6 +95,7 @@ echo "Setting permissions" ; sleep 2
 #
 chown wpadmin:wpadmin -R /home/wpadmin/
 #
+echo ""
 echo "Installation and setup complete..."
 echo ""
 echo "Please update the /etc/crontab file with the correct" 
