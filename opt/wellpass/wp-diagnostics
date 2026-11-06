@@ -3,7 +3,7 @@
 # Version 2.4
 #
 current_ip=$(hostname -I)
-release="2.2"
+release="2.4"
 #
 if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Not running with sufficient permissions, please use sudo."
