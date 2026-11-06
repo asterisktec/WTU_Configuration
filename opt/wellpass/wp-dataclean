@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Version 1.0
+# Version 2.4
 #
 cp /home/wpadmin/results.csv /home/wpadmin/ARCHIVE_DATA/results_$(date +%Y-%m-%d-%H:%M).csv
 #
