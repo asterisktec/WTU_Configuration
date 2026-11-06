@@ -85,7 +85,7 @@ echo "Linking archive data folder" ; sleep 1
 #
 # remove old links
 #
-rm /home/wpadmin/ARCHIVE_DATA/
+rm /home/wpadmin/ARCHIVE_DATA
 #
 ln -s /opt/wellpass/ARCHIVE_DATA/ /home/wpadmin/
 #
