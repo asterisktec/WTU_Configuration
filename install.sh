@@ -74,14 +74,14 @@ ln -s /opt/wellpass/http/ /home/wpadmin/
 #
 # Copy the results files
 #
-echo "Copying database files to wpadmin home" ; sleep 1
+echo "Copying database files to wpadmin home" ; sleep 2
 #
 cp /opt/wellpass/results_blank.csv /home/wpadmin/
 cp /opt/wellpass/results.csv /home/wpadmin/
 #
 # Link the archive data folder
 #
-echo "Linking archive data folder" ; sleep 1
+echo "Linking archive data folder" ; sleep 2
 #
 # remove old links
 #
