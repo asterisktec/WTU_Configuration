@@ -18,4 +18,5 @@ Step 4. In the shell run
 
 That will link all of the appropriate files and scipts to the correct places.
 
-Easy peasy!
+The only manual code editing you have to do is modify the /etc/crontab file with
+the correct hostname. That's it! Once you've done that, reboot and relax.
