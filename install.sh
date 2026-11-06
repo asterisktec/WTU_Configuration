@@ -99,5 +99,5 @@ echo ""
 echo "Installation and setup complete..."
 echo ""
 echo "Please update the /etc/crontab file with the correct" 
-echo "hostname of $HOSTNAME to ensure correct mail delivery."
+echo "SYSTEMHOST variable of $HOSTNAME to ensure correct mail delivery."
 #
