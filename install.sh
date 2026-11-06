@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Version 1.4
+# Version 1.5
 #
 # This will automatically install the WTU menus and email configuration.
 #
@@ -48,6 +48,11 @@ postmap /etc/postfix/sasl_passwd
 #
 echo "Linking menu and other scripts" ; sleep 2
 #
+# remove old links
+# 
+rm /usr/bin/wp-diagnostics
+rm /usr/bin/wp-dataclean
+#
 ln -s /opt/wellpass/wp-diagnostics /usr/bin/
 ln -s /opt/wellpass/wp-dataclean /usr/bin/
 #
@@ -60,6 +65,10 @@ chmod +x /usr/bin/wp-diagnostics /usr/bin/wp-dataclean
 # Copy over the webpage
 #
 echo "Copying web data" ; sleep 2
+#
+# remove old links
+#
+rm /home/wpadmin/http
 #
 ln -s /opt/wellpass/http/ /home/wpadmin/
 #
@@ -74,6 +83,10 @@ cp /opt/wellpass/results.csv /home/wpadmin/
 #
 echo "Linking archive data folder" ; sleep 1
 #
+# remove old links
+#
+rm /home/wpadmin/ARCHIVE_DATA/
+#
 ln -s /opt/wellpass/ARCHIVE_DATA/ /home/wpadmin/
 #
 # And lastly, make sure all permissions are set correctly
@@ -83,3 +96,4 @@ echo "Setting permissions" ; sleep 2
 chown wpadmin:wpadmin -R /home/wpadmin/
 #
 echo "Installation and setup complete..."
+echo "Please update the /etc/crontab file with the correct hostname of $HOSTNAME to ensure correct mail delivery."
