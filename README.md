@@ -4,7 +4,7 @@ Step 1. Clone this repository with the following command:
 
 ```git clone https://github.com/asterisktec/WTU_Configuration```
 
-Step 2. Change to the new WTU_Menu folder:
+Step 2. Change to the new WTU_Configuration folder:
 
 ```cd WTU_Configuration```
 
