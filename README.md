@@ -1,4 +1,4 @@
-# Simple WTU setup file
+# WTU setup file
 
 Step 1. Clone this repository with the following command:
 
