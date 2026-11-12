@@ -19,14 +19,11 @@ read -p "Enter test server ID or enter your own preferred: " server_number
 #
 # Update the global environment variable
 #
-echo "Updating global environment variable" ; sleep 2
+echo "Updating server environment variable" ; sleep 2
 #
-printf "SERVER_ID=$server_number" > /etc/environment
 printf "$server_number" > /opt/wellpass/server_id
 #
 echo "Update complete, test server set to $server_number"
-echo ""
-echo "Please reboot Pi to make change effective."
 echo ""
 echo "Returning to main menu ..." ; sleep 5
 #
