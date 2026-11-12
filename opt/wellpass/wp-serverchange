@@ -2,4 +2,22 @@
 #
 # Version 2.4
 #
-read 
+echo "Listing the nearest servers to your location OR enter your "
+echo ""
+speedtest -L
+echo ""
+read -p "Enter required test server ID or enter your own:" server_number
+#
+# Update the global environment variable
+#
+echo "Updating global environment variable" ; sleep 2
+#
+printf "SERVER_ID=$server_number" >> /etc/environment
+#
+echo "Update complete, test server set to $server_number"
+echo ""
+echo "Please reboot Pi to make change effective."
+echo ""
+echo "Returning to main menu ..." ; sleep 2
+#
+sudo wp-diagnostics
