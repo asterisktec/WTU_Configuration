@@ -2,6 +2,13 @@
 #
 # Version 2.4
 #
+# Must be run as root or in sudo
+#
+if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+    echo "Not running with sufficient permissions, please use sudo."
+    exit
+fi
+#
 clear
 #
 echo "Listing the nearest servers to your location OR enter your own specific one."
