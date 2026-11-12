@@ -18,11 +18,12 @@ CHOICE=$(whiptail --title "WellPass Test Unit - $HOSTNAME" --ok-button "Run Choi
 "4" "Start File Server" \
 "5" "Restart Results Server" \
 "6" "Clear Results Data" \
-"7" "PI Process Monitor" \
-"8" "Configure Raspberry-PI" \
-"9" "Update and Upgrade Software" \
-"10" "Shutdown Device" \
-"11" "Reboot Device" 3>&1 1>&2 2>&3)
+"7" "Change Testing Server" \
+"8" "PI Process Monitor" \
+"9" "Configure Raspberry-PI" \
+"10" "Update and Upgrade Software" \
+"11" "Shutdown Device" \
+"12" "Reboot Device" 3>&1 1>&2 2>&3)
 
 # Handle the user choice based on exit status and selection
 if [ $? -eq 0 ]; then
@@ -33,11 +34,12 @@ case $CHOICE in
 4) python3 -m http.server 8000 --directory /home/wpadmin/ARCHIVE_DATA > /dev/null 2>&1 & ;;
 5) sudo killall php ; php -S 0.0.0.0:80 /home/wpadmin/http/index.php > /dev/null 2>&1 &  ;;
 6) wp-dataclean ; echo -e "\nData has been cleared and archived.\nReturning to main menu..." ; sleep 5 ;;
-7) sudo btop ;;
-8) sudo raspi-config ;;
-9) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
-10) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
-11) clear ; echo "Rebooting in 5 seconds... CTRL+C to abort" ; sleep 5 ; reboot ;;
+7) sudo wp-serverchange ;;
+8) sudo btop ;;
+9) sudo raspi-config ;;
+10) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
+11) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
+12) clear ; echo "Rebooting in 5 seconds... CTRL+C to abort" ; sleep 5 ; reboot ;;
 esac
 #
 # Return to menu
