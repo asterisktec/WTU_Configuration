@@ -2,7 +2,9 @@
 #
 # Version 2.4
 #
-echo "Listing the nearest servers to your location OR enter your "
+clear
+#
+echo "Listing the nearest servers to your location OR enter your own specific one."
 echo ""
 speedtest -L
 echo ""
@@ -21,3 +23,4 @@ echo ""
 echo "Returning to main menu ..." ; sleep 2
 #
 sudo wp-diagnostics
+#
