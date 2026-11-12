@@ -57,10 +57,12 @@ echo "Linking menu and other scripts" ; sleep 2
 rm /usr/bin/wp-diagnostics
 rm /usr/bin/wp-dataclean
 rm /usr/bin/wp-serverchange
+rm /usr/bin/run_speedtest
 #
 ln -s /opt/wellpass/wp-diagnostics /usr/bin/
 ln -s /opt/wellpass/wp-dataclean /usr/bin/
 ln -s /opt/wellpass/wp-serverchange /usr/bin/
+ln -s /opt/wellpass/run_speedtest /usr/bin/
 #
 # Setting as executable
 #
