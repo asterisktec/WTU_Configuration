@@ -106,4 +106,10 @@ echo "Installation and setup complete..."
 echo ""
 echo "Please change the /etc/crontab file with the correct" 
 echo "SYSTEMHOST variable to $HOSTNAME to ensure correct mail delivery."
+echo "Opening file for editing in 5 seconds" ; sleep 5
 #
+nano /etc/crontab
+#
+systemctl restart cron.service
+#
+echo "Finished."
