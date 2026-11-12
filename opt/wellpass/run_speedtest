@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+TESTING_SERVER=$(cat /opt/wellpass/server_id)
+#
+speedtest -s $TESTING_SERVER -f csv >> /home/wpadmin/results.csv
+#
