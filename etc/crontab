@@ -33,7 +33,7 @@ SYSTEMHOST="WTU-XXXX"
 #
 # Email results every day at 9:00am 
 #
-0 9 * * * 	wpadmin	echo "Here are the latest speedtest results from $SYSTEMHOST" | mutt -s "Test Results from $SYSTEMHOST" -a /home/wpadmin/results.csv -- alanh@wellpassgroup.com
+0 9 * * *  wpadmin	echo "Here are the latest speedtest results from $SYSTEMHOST" | mutt -s "Test Results from $SYSTEMHOST" -a /home/wpadmin/results.csv -- alanh@wellpassgroup.com
 #
 # Archive old records at 14:00
 #
