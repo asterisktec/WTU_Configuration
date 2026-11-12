@@ -15,6 +15,7 @@ read -p "Enter test server ID or enter your own preferred: " server_number
 echo "Updating global environment variable" ; sleep 2
 #
 printf "SERVER_ID=$server_number" > /etc/environment
+printf "$server_number" > /opt/wellpass/server_id
 #
 echo "Update complete, test server set to $server_number"
 echo ""
