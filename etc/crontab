@@ -9,6 +9,9 @@
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 TESTING_SERVER=$(cat /opt/wellpass/server_id)
+#
+# Modify this variable for correct email delivery
+#
 SYSTEMHOST="WTU-XXXX"
 #
 # Example of job definition:
