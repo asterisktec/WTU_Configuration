@@ -25,7 +25,7 @@ SYSTEMHOST="WTU-XXXX"
 #
 # Run speedtest every hour and append to file.
 #
-0 * * * * 	wpadmin	speedtest -f csv >> /home/wpadmin/results.csv
+0 * * * * 	wpadmin	speedtest -s $SERVER_ID -f csv >> /home/wpadmin/results.csv
 #
 # Email results every day at 9:00am 
 #
