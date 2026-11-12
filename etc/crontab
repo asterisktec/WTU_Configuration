@@ -8,8 +8,8 @@
 #
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-SYSTEMHOST="WTU-XXXX"
 TESTING_SERVER=$(cat /opt/wellpass/server_id)
+SYSTEMHOST="WTU-XXXX"
 #
 # Example of job definition:
 # .---------------- minute (0 - 59)
