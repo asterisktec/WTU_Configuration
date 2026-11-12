@@ -37,6 +37,5 @@ SYSTEMHOST="WTU-XXXX"
 #
 # Archive old records at 14:00
 #
-0 14 * * * wpadmin  wp-dataclean >/dev/null 2>&1
-#
+0 14 * * *  wpadmin  wp-dataclean >/dev/null 2>&1
 #
