@@ -4,6 +4,7 @@
 #
 current_ip=$(hostname -I)
 release="2.4"
+TESTING_SERVER=$(cat /opt/wellpass/server_id)
 #
 if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "Not running with sufficient permissions, please use sudo."
@@ -29,7 +30,7 @@ CHOICE=$(whiptail --title "WellPass Test Unit - $HOSTNAME" --ok-button "Run Choi
 if [ $? -eq 0 ]; then
 case $CHOICE in
 1) wavemon ;;
-2) clear ; echo -e "Running speedtest now... please wait." ; speedtest -s $SERVER_ID -f csv >> /home/wpadmin/results.csv ; echo -e "\nTest completeted and available to view at http://$current_ip \nReturning to main menu in 5 seconds..." ; sleep 5 ; php -S 0.0.0.0:80 /home/wpadmin/http/index.php > /dev/null 2>&1 & ;;
+2) clear ; echo -e "Running speedtest now on server ID $TESTING_SERVER ... please wait." ; speedtest -s $TESTING_SERVER -f csv >> /home/wpadmin/results.csv ; echo -e "\nTest completeted and available to view at http://$current_ip \nReturning to main menu in 5 seconds..." ; sleep 5 ; php -S 0.0.0.0:80 /home/wpadmin/http/index.php > /dev/null 2>&1 & ;;
 3) nmtui ;;
 4) python3 -m http.server 8000 --directory /home/wpadmin/ARCHIVE_DATA > /dev/null 2>&1 & ;;
 5) sudo killall php ; php -S 0.0.0.0:80 /home/wpadmin/http/index.php > /dev/null 2>&1 &  ;;
