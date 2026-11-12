@@ -11,6 +11,10 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     exit
 fi
 #
+clear
+#
+echo "Beginning WTU installation process..."
+echo ""
 echo "Moving main files to the /opt folder" ; sleep 2
 #
 cp -r opt /
