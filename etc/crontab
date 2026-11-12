@@ -9,6 +9,7 @@
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 SYSTEMHOST="WTU-XXXX"
+TESTING_SERVER=$(cat /opt/wellpass/server_id)
 #
 # Example of job definition:
 # .---------------- minute (0 - 59)
@@ -25,7 +26,7 @@ SYSTEMHOST="WTU-XXXX"
 #
 # Run speedtest every hour and append to file.
 #
-0 * * * * 	wpadmin	speedtest -s $SERVER_ID -f csv >> /home/wpadmin/results.csv
+0 * * * * 	wpadmin	speedtest -s $TESTING_SERVER -f csv >> /home/wpadmin/results.csv
 #
 # Email results every day at 9:00am 
 #
