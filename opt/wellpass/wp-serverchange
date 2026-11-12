@@ -27,5 +27,3 @@ echo "Update complete, test server set to $server_number"
 echo ""
 echo "Returning to main menu ..." ; sleep 5
 #
-sudo wp-diagnostics
-#
