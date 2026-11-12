@@ -8,7 +8,7 @@ echo "Listing the nearest servers to your location OR enter your own specific on
 echo ""
 speedtest -L
 echo ""
-read -p "Enter required test server ID or enter your own:" server_number
+read -p "Enter test server ID or enter your own preferred: " server_number
 #
 # Update the global environment variable
 #
@@ -20,7 +20,7 @@ echo "Update complete, test server set to $server_number"
 echo ""
 echo "Please reboot Pi to make change effective."
 echo ""
-echo "Returning to main menu ..." ; sleep 2
+echo "Returning to main menu ..." ; sleep 5
 #
 sudo wp-diagnostics
 #
