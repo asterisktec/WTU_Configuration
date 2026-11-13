@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+echo "Updating the WTU Site Name"
+echo ""
+read -p "Enter the new site name or location: " sitename
+#
+sitename="${sitename//[$'\n']/}"
+#
+printf "$sitename" > /opt/wellpass/site_name
+#
