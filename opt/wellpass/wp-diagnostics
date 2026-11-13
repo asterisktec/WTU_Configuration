@@ -11,7 +11,7 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
 fi
 #
 # Create a visual menu box
-CHOICE=$(whiptail --title "WellPass Test Unit - $HOSTNAME" --ok-button "Run Choice" --cancel-button "Exit Menu" --clear --menu "\nWellPass Diagnostics V$release\nServer IP Address's: $current_ip \nChoose an option:" 20 64 8 \
+CHOICE=$(whiptail --title "WellPass Test Unit - $HOSTNAME" --ok-button "Run Choice" --cancel-button "Exit Menu" --clear --menu "\nWellPass Diagnostics V$release\nServer IP Address's: $current_ip \nChoose an option:" 20 64 10 \
 "1" "Check WiFi Signal" \
 "2" "Run Network Speed Test" \
 "3" "Configure Network Settings" \
