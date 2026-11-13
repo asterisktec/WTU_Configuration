@@ -8,3 +8,6 @@ sitename="${sitename//[$'\n']/}"
 #
 printf "$sitename" > /opt/wellpass/site_name
 #
+echo ""
+echo "Site Name has been updated to $sitename" ; sleep 2
+#
