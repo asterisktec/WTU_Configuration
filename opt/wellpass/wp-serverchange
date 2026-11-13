@@ -23,5 +23,5 @@ printf "$server_number" > /opt/wellpass/server_id
 #
 echo "Update complete, test server set to $server_number"
 echo ""
-echo "Returning to main menu ..." ; sleep 5
+echo "Returning to main menu ..." ; sleep 2
 #
