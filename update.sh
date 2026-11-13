@@ -44,6 +44,7 @@ rm /usr/bin/wp-serverchange
 ln -s /opt/wellpass/wp-diagnostics /usr/bin/
 ln -s /opt/wellpass/wp-dataclean /usr/bin/
 ln -s /opt/wellpass/wp-serverchange /usr/bin/
+ln -s /opt/wellpass/run_speedtest /usr/bin/
 #
 # Setting as executable
 #
