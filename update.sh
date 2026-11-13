@@ -53,7 +53,7 @@ ln -s /opt/wellpass/change_sitename /usr/bin/
 #
 echo "Setting executable permissions on scripts." ; sleep 1 
 #
-chmod +x /usr/bin/wp-diagnostics /usr/bin/wp-dataclean /usr/bin/wp-serverchange /usr/bin/run_speedtest
+chmod +x /usr/bin/wp-diagnostics /usr/bin/wp-dataclean /usr/bin/wp-serverchange /usr/bin/run_speedtest /usr/bin/change_sitename
 #
 # Copy over the webpage
 #
