@@ -43,7 +43,7 @@ case $CHOICE in
 11) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
 12) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
 13) clear ; echo "Rebooting in 5 seconds... CTRL+C to abort" ; sleep 5 ; reboot ;;
-14) mutt ;;
+14) sudo -u wpadmin mutt ;;
 esac
 #
 # Return to menu
