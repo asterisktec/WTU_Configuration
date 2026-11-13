@@ -11,7 +11,7 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
 fi
 #
 # Create a visual menu box
-CHOICE=$(whiptail --title "WellPass Test Unit - $HOSTNAME" --ok-button "Run Choice" --cancel-button "Exit Menu" --clear --menu "\nWellPass Diagnostics V$release\nServer IP Address's: $current_ip \nChoose an option:" 20 64 8 \
+CHOICE=$(whiptail --title "WellPass Test Unit - $HOSTNAME" --ok-button "Run Choice" --cancel-button "Exit Menu" --clear --menu "\nWellPass Diagnostics V$release\nServer IP Address's: $current_ip \nChoose an option:" 21 64 10 \
 "1" "Check WiFi Signal" \
 "2" "Run Network Speed Test" \
 "3" "Configure Network Settings" \
@@ -19,12 +19,13 @@ CHOICE=$(whiptail --title "WellPass Test Unit - $HOSTNAME" --ok-button "Run Choi
 "5" "Restart Results Server" \
 "6" "Clear Results Data" \
 "7" "Change Testing Server" \
-"8" "PI Process Monitor" \
-"9" "Change Sitename" \
+"8" "Change Sitename" \
+"9" "PI Process Monitor" \
 "10" "Configure Raspberry-PI" \
 "11" "Update and Upgrade Software" \
 "12" "Shutdown Device" \
-"13" "Reboot Device" 3>&1 1>&2 2>&3)
+"13" "Reboot Device" \
+"14" "Send Test Email" 3>&1 1>&2 2>&3)
 
 # Handle the user choice based on exit status and selection
 if [ $? -eq 0 ]; then
@@ -36,12 +37,13 @@ case $CHOICE in
 5) sudo killall php ; php -S 0.0.0.0:80 /home/wpadmin/http/index.php > /dev/null 2>&1 &  ;;
 6) wp-dataclean ; echo -e "\nData has been cleared and archived.\nReturning to main menu..." ; sleep 2 ;;
 7) sudo wp-serverchange ;;
-8) sudo btop ;;
-9) sudo change_sitename ;;
+8) sudo change_sitename ;;
+9) sudo btop ;;
 10) sudo raspi-config ;;
 11) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
 12) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
 13) clear ; echo "Rebooting in 5 seconds... CTRL+C to abort" ; sleep 5 ; reboot ;;
+14) sudo -u wpadmin mutt ;;
 esac
 #
 # Return to menu
