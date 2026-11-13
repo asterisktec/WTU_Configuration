@@ -41,17 +41,19 @@ rm /usr/bin/wp-diagnostics
 rm /usr/bin/wp-dataclean
 rm /usr/bin/wp-serverchange
 rm /usr/bin/run_speedtest
+rm /usr/bin/change_sitename
 #
 ln -s /opt/wellpass/wp-diagnostics /usr/bin/
 ln -s /opt/wellpass/wp-dataclean /usr/bin/
 ln -s /opt/wellpass/wp-serverchange /usr/bin/
 ln -s /opt/wellpass/run_speedtest /usr/bin/
+ln -s /opt/wellpass/change_sitename /usr/bin/
 #
 # Setting as executable
 #
 echo "Setting executable permissions on scripts." ; sleep 1 
 #
-chmod +x /usr/bin/wp-diagnostics /usr/bin/wp-dataclean /usr/bin/wp-serverchange /usr/bin/run_speedtest
+chmod +x /usr/bin/wp-diagnostics /usr/bin/wp-dataclean /usr/bin/wp-serverchange /usr/bin/run_speedtest /usr/bin/change_sitename
 #
 # Copy over the webpage
 #
