@@ -14,20 +14,20 @@ clear
 #
 echo "Beginning WTU installation process..."
 echo ""
-echo "Moving main files to the /opt folder" ; sleep 2
+echo "Moving main files to the /opt folder." ; sleep 1
 #
 cp -r opt /
 #
 # Copy over the new crontab file
 # but backup the old one just to be safe.
 #
-echo "Backing up old crontab file" ; sleep 2
+echo "Backing up old crontab file." ; sleep 1
 #
 mv /etc/crontab /etc/crontab.bac
 #
 # Copy over the postfix data and crontab
 #
-echo "Copying /etc folder to root" ; sleep 2
+echo "Copying /etc folder to root." ; sleep 1
 #
 cp -r etc /
 #
@@ -43,13 +43,13 @@ printf %s "smtp.mailgun.org raspberrypi_diagnostic@sandboxd9ab5c704d1e4ae9b9c66b
 #
 # Now to reload Postfix with the new data
 #
-echo "Updating PostFix Email System" ; sleep 2
+echo "Updating PostFix Email System." ; sleep 1
 #
 postmap /etc/postfix/sasl_passwd
 #
 # Linking required menu scripts
 #
-echo "Linking menu and other scripts" ; sleep 2
+echo "Linking menu and other scripts." ; sleep 1
 #
 # remove old links
 # 
@@ -65,13 +65,13 @@ ln -s /opt/wellpass/run_speedtest /usr/bin/
 #
 # Setting as executable
 #
-echo "Setting executable permissions on scripts" ; sleep 2
+echo "Setting executable permissions on scripts." ; sleep 1
 #
-chmod +x /usr/bin/wp-diagnostics /usr/bin/wp-dataclean
+chmod +x /usr/bin/wp-diagnostics /usr/bin/wp-dataclean /usr/bin/run_speedtest /usr/bin/wp-serverchange
 #
 # Copy over the webpage
 #
-echo "Copying web data" ; sleep 2
+echo "Copying results viewer web data." ; sleep 1
 #
 # remove old links
 #
@@ -81,14 +81,14 @@ ln -s /opt/wellpass/http/ /home/wpadmin/
 #
 # Copy the results files
 #
-echo "Copying database files to wpadmin home" ; sleep 2
+echo "Copying database files to wpadmin home." ; sleep 1
 #
 cp /opt/wellpass/results_blank.csv /home/wpadmin/
 cp /opt/wellpass/results.csv /home/wpadmin/
 #
 # Link the archive data folder
 #
-echo "Linking archive data folder" ; sleep 2
+echo "Linking archive data folder." ; sleep 1
 #
 # remove old links
 #
@@ -98,7 +98,7 @@ ln -s /opt/wellpass/ARCHIVE_DATA/ /home/wpadmin/
 #
 # And lastly, make sure all permissions are set correctly
 #
-echo "Setting permissions" ; sleep 2
+echo "Setting file permissions." ; sleep 1
 #
 chown wpadmin:wpadmin -R /home/wpadmin/
 #
@@ -107,10 +107,10 @@ echo "Installation and setup complete..."
 echo ""
 echo "Please change the /etc/crontab file with the correct" 
 echo "SYSTEMHOST variable to $HOSTNAME to ensure correct mail delivery."
-echo "Opening file for editing in 5 seconds" ; sleep 5
+echo "Opening file for editing in 2 seconds" ; sleep 2
 #
 nano /etc/crontab
 #
 systemctl restart cron.service
 #
-echo "Finished."
+echo "Installation Finished."
