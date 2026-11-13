@@ -5,6 +5,7 @@
 $csvPath   = '/home/wpadmin/results.csv';   // absolute path to the CSV on the server
 $delimiter = ',';
 $host = gethostname();
+$site_name = file_get_contents("/opt/wellpass/site_name");
 $pageTitle = "WiFi Speed-Test Results for $host";
 
 // Columns to keep, by header name (exactly as in the CSV).
