@@ -86,14 +86,14 @@ echo "Setting file permissions." ; sleep 1
 #
 chown wpadmin:wpadmin -R /home/wpadmin/
 #
-echo ""
-echo "Update nearly complete..."
-echo ""
-echo "Please change the /etc/crontab file with the correct" 
-echo "SYSTEMHOST variable to $HOSTNAME to ensure correct mail delivery."
-echo "Opening file for editing in 2 seconds" ; sleep 2 
+# echo ""
+# echo "Update nearly complete..."
+# echo ""
+# echo "Please change the /etc/crontab file with the correct" 
+# echo "SYSTEMHOST variable to $HOSTNAME to ensure correct mail delivery."
+# echo "Opening file for editing in 2 seconds" ; sleep 2 
 #
-nano /etc/crontab
+# nano /etc/crontab
 #
 systemctl restart cron.service
 #
