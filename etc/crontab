@@ -26,9 +26,9 @@ SYSTEMHOST=$(hostname)
 47 6	* * 7	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; }
 52 6	1 * *	root	test -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.monthly; }
 #
-# Run speedtest every 4 hours and append to file.
+# Run speedtest every 1 hour and append to file.
 #
-0 */4 * * * wpadmin	run_speedtest
+0 * * * * wpadmin	run_speedtest
 #
 # Email results every day at 9:00am 
 #
