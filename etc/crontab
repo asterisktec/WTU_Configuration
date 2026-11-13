@@ -4,7 +4,6 @@
 # and files in /etc/cron.d. These files also have username fields,
 # that none of the other crontabs do.
 #
-# Version 2.4
 #
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
