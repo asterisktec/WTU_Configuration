@@ -19,8 +19,8 @@ CHOICE=$(whiptail --title "WellPass Test Unit - $HOSTNAME" --ok-button "Run Choi
 "5" "Restart Results Server" \
 "6" "Clear Results Data" \
 "7" "Change Testing Server" \
-"8" "PI Process Monitor" \
-"9" "Change Sitename" \
+"8" "Change Sitename" \
+"9" "PI Process Monitor" \
 "10" "Configure Raspberry-PI" \
 "11" "Update and Upgrade Software" \
 "12" "Shutdown Device" \
@@ -36,8 +36,8 @@ case $CHOICE in
 5) sudo killall php ; php -S 0.0.0.0:80 /home/wpadmin/http/index.php > /dev/null 2>&1 &  ;;
 6) wp-dataclean ; echo -e "\nData has been cleared and archived.\nReturning to main menu..." ; sleep 2 ;;
 7) sudo wp-serverchange ;;
-8) sudo btop ;;
-9) sudo change_sitename ;;
+8) sudo change_sitename ;;
+9) sudo btop ;;
 10) sudo raspi-config ;;
 11) sudo apt-get update && sudo apt-get autoremove -y && sudo apt-get dist-upgrade -y ;;
 12) clear ; echo "Power Off in 10 seconds... CTRL+C to abort" ; sleep 10 ; poweroff ;;
