@@ -25,7 +25,7 @@ CHOICE=$(whiptail --title "WellPass Test Unit - $HOSTNAME" --ok-button "Run Choi
 "11" "Update and Upgrade Software" \
 "12" "Shutdown Device" \
 "13" "Reboot Device" \
-"14" "Send support email" 3>&1 1>&2 2>&3)
+"14" "Send Test Email" 3>&1 1>&2 2>&3)
 
 # Handle the user choice based on exit status and selection
 if [ $? -eq 0 ]; then
