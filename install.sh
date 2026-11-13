@@ -1,6 +1,5 @@
 #!/bin/bash
 #
-# Version 2.4
 #
 # This will automatically install the WTU menus and email configuration.
 #
