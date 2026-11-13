@@ -11,7 +11,7 @@ TESTING_SERVER=$(cat /opt/wellpass/server_id)
 #
 # Modify this variable for correct email delivery
 #
-SYSTEMHOST="WTU-XXXX"
+SYSTEMHOST=$(hostname)
 #
 # Example of job definition:
 # .---------------- minute (0 - 59)
