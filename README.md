@@ -1,8 +1,14 @@
 # WTU setup file
 
-Step 1. Clone this repository with the following command:
+Step 1. Clone or Pull
+
+If this is a NEW installation, clone this repository with the following command:
 
 ```git clone https://github.com/asterisktec/WTU_Configuration```
+
+If this is an existing WTU, then simply pull the latest updates with:
+
+```git pull```
 
 Step 2. Change to the new WTU_Configuration folder:
 
