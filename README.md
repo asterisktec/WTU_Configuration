@@ -3,11 +3,11 @@
 ## Step 1. Clone or Pull
 
 
-If this is a NEW installation, clone this repository with the following command:
+If this is a **NEW** installation, clone this repository with the following command:
 
 ```git clone https://github.com/asterisktec/WTU_Configuration```
 
-If this is an existing WTU, then simply pull the latest updates with:
+If this is an **existing WTU**, then simply pull the latest updates with:
 
 ```cd WTU_Configuration```
 
