@@ -1,6 +1,6 @@
 # WTU setup file
 
-Step 1. Clone or Pull
+##Step 1. Clone or Pull
 
 If this is a NEW installation, clone this repository with the following command:
 
@@ -13,7 +13,7 @@ If this is an existing WTU, then simply pull the latest updates with:
 ```git pull```
 
 
-Step 2.
+##Step 2. Update or Install
 
 If this is a NEW WTU ... In the shell run 
 
