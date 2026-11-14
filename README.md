@@ -9,6 +9,7 @@ If this is a NEW installation, clone this repository with the following command:
 If this is an existing WTU, then simply pull the latest updates with:
 
 ```cd WTU_Configuration```
+
 ```git pull```
 
 Step 2. Change to the new WTU_Configuration folder:
