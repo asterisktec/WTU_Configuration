@@ -12,6 +12,7 @@ If this is an existing WTU, then simply pull the latest updates with:
 
 ```git pull```
 
+
 Step 2.
 
 If this is a NEW WTU ... In the shell run 
