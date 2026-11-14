@@ -12,13 +12,11 @@ If this is an existing WTU, then simply pull the latest updates with:
 
 ```git pull```
 
-Step 2. Change to the new WTU_Configuration folder:
-
-```cd WTU_Configuration```
-
-Step 3.
+Step 2.
 
 If this is a NEW WTU ... In the shell run 
+
+```cd WTU_Configuration```
 
 ```sudo ./install.sh```
 
