@@ -7,9 +7,6 @@
 #
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-TESTING_SERVER=$(< /opt/wellpass/server_id)
-TESTING_LOCATION=$(< /opt/wellpass/site_name)
-site=$(< /opt/wellpass/site_name)
 #
 #
 # Example of job definition:
@@ -31,7 +28,7 @@ site=$(< /opt/wellpass/site_name)
 #
 # Email results every day at 9:00am 
 #
-0 9 * * * wpadmin       echo "Here are the latest speedtest results from $site" | mutt -s "Test Results from $site"  -a /home/wpadmin/results.csv -- alanh@wellpassgroup.com
+0 9 * * * wpadmin    /opt/wellpass/send_email
 #
 # Archive old records at 14:00
 #
