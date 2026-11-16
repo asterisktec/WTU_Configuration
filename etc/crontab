@@ -7,13 +7,10 @@
 #
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-TESTING_SERVER=$(cat /opt/wellpass/server_id)
-TESTING_LOCATION=$(cat /opt/wellpass/site_name)
-site=$(cat /opt/wellpass/site_name)
+TESTING_SERVER=$(< /opt/wellpass/server_id)
+TESTING_LOCATION=$(< /opt/wellpass/site_name)
+site=$(< /opt/wellpass/site_name)
 #
-# Modify this variable for correct email delivery
-#
-SYSTEMHOST=$(hostname)
 #
 # Example of job definition:
 # .---------------- minute (0 - 59)
