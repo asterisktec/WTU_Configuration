@@ -1,0 +1,8 @@
+#!/bin/bash
+#
+TESTING_SERVER=$(< /opt/wellpass/server_id)
+TESTING_LOCATION=$(< /opt/wellpass/site_name)
+site=$(< /opt/wellpass/site_name)
+#
+echo "Here are the latest speedtest results from $site" | mutt -s "Test Results from $site"  -a /home/wpadmin/results.csv -- alanh@wellpassgroup.com
+#
