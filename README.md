@@ -1,16 +1,28 @@
 # WTU setup file
 
-Step 1. Clone this repository with the following command:
+## Step 1. Clone or Pull
+
+
+If this is a **NEW** installation, clone this repository with the following command:
 
 ```git clone https://github.com/asterisktec/WTU_Configuration```
 
-Step 2. Change to the new WTU_Configuration folder:
+If this is an **existing WTU**, then simply pull the latest updates with:
 
 ```cd WTU_Configuration```
 
-Step 3. In the shell run 
+```git pull```
 
-```./install.sh```
+
+## Step 2. Update or Install
+
+
+
+If this is a **NEW WTU** ... In the shell run 
+
+```cd WTU_Configuration```
+
+```sudo ./install.sh```
 
 That will link all of the appropriate files and scipts to the correct places.
 
@@ -18,5 +30,15 @@ That will link all of the appropriate files and scipts to the correct places.
 
 (Hint: It's in 1Password)
 
-The only manual code editing you have to do is modify the /etc/crontab file with
-the correct hostname. That's it! Once you've done that, reboot and relax.
+
+
+
+If this is an **EXISTING WTU** ... In the shell run 
+
+```sudo ./update.sh```
+
+That will update all of the files with the most current version and will not change the email settings.
+
+
+
+That's it! Once you've done that, reboot and relax.
