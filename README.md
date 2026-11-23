@@ -1,4 +1,4 @@
-# WTU setup file
+# Wireless Test Unit setup file
 
 ## Step 1. Clone or Pull
 
