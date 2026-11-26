@@ -7,9 +7,10 @@ $delimiter = ',';
 //
 $hostName = gethostname();
 $hostIp = gethostbyname($hostName);
+$server_ip = $_SERVER['SERVER_ADDR'] ?? 'Not available';
 //
 $site_name = file_get_contents("/opt/wellpass/site_name");
-$pageTitle = "Speed-Test Results for $hostName - $site_name - $hostIp";
+$pageTitle = "Speed-Test Results for $hostName - $site_name - $server_ip";
 
 // Columns to keep, by header name (exactly as in the CSV).
 // Order here = order on the page. Leave empty to keep all columns.
