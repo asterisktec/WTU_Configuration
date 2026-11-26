@@ -7,7 +7,7 @@ $delimiter = ',';
 //
 $hostName = gethostname();
 $hostIp = gethostbyname($hostName);
-$server_ip = $_SERVER['SERVER_ADDR'] ?? 'Not available';
+$server_ip = shell_exec('hostname -I');
 //
 $site_name = file_get_contents("/opt/wellpass/site_name");
 $pageTitle = "Speed-Test Results for $hostName - $site_name - $server_ip";
