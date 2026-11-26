@@ -104,4 +104,9 @@ chown wpadmin:wpadmin -R /home/wpadmin/
 #
 systemctl restart cron.service
 #
+echo "Restoring Site Name and Testing Server" ; sleep 1
+#
+cp /opt/wellpass_old/site_name /opt/wellpass/
+cp /opt/wellpass_old/server_id /opt/wellpass/
+#
 echo "Update Finished."
