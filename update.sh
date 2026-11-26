@@ -17,6 +17,8 @@ echo ""
 echo "Backing up any old configuration"
 echo ""
 #
+rm -rf /opt/wellpass_old
+#
 mv /opt/wellpass /opt/wellpass_old ; sleep 1
 #
 echo "Moving main files to the /opt folder." ; sleep 1 
