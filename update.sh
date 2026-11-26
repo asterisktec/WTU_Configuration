@@ -14,6 +14,11 @@ clear
 #
 echo "Beginning WTU update process..."
 echo ""
+echo "Backing up any old configuration"
+echo ""
+#
+mv /opt/wellpass /opt/wellpass_old ; sleep 1
+#
 echo "Moving main files to the /opt folder." ; sleep 1 
 #
 cp -r opt /
