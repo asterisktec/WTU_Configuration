@@ -1,0 +1,33 @@
+#
+# Other changes that need to be made to the OS
+#
+# Modify the /etc/sudoers file
+wpadmin ALL=(root) NOPASSWD: /usr/bin/wp-diagnostics
+#
+# Modify the .bashrc file
+#
+sudo /usr/bin/wp-diagnostics
+#
+#
+# Modify the /etc/motd
+#
+                    ++
+                   ++++
+                 ++++++++
+                ++++++++++
+               +++++++  +++
+             +++++++++   ++++
+            ++++++++  +++ ++++
+           ++++++++ + +++++++++
+          ++++++  + +  +++++++++
+         ++++++++++  + ++++++++++
+         ++++++  ++ +++ +  ++++++
+      ++++                      ++++
+   ++        %%%%%%%%%%%%%%%%        ++
++        %%%%%%%%%%%%%%%%%%%%%%%%        +
+          %%%%%%%%%%%%%%%%%%%%%%
+           %%%%%%%%%%%%%%%%%%%%
+             %%%%%%%%%%%%%%%%
+                %%%%%%%%%%
+
+               - WellPass -
